@@ -1,0 +1,48 @@
+{
+  "name": "komalsingh",
+  "version": "1.5.0",
+  "private": false,
+  "license": "MIT",
+  "repository": "git://github.com/adenekan41/codewonders.git",
+  "description": "Komal Singh's Website",
+  "author": "Komal Singh <komalsingh54@gmail.com> (https://komal-singh.com)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export -o build/",
+    "deploy": "npm run build && npm run export",
+    "lint": "eslint .",
+    "fix": "eslint --fix .",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "check-packages": "yarn clean && yarn compile && yarn test && yarn lint"
+  },
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "codewonders-helpers": "^1.1.0",
+    "next": "10.0.4",
+    "next-page-transitions": "^1.0.0-beta.2",
+    "next-pwa": "^5.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
+    "react-helmet": "^6.1.0",
+    "react-progressive-image": "^0.6.0",
+    "scoutbar": "^1.2.3",
+    "styled-components": "^5.3.6",
+    "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4"
+  }
+}
