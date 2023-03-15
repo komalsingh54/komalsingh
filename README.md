@@ -1,2 +1,0 @@
-# komalsingh
-my website
