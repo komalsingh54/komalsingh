@@ -30,7 +30,7 @@ const About = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open Github Link"
-                  href="https://github.com/adenekan41"
+                  href="https://github.com/komalsingh54"
                 >
                   Engineering{' '}
                   <small>

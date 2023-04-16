@@ -44,8 +44,8 @@ export default class MyDocument extends Document {
             name="msapplication-config"
             content="/icons/browserconfig.xml"
           />
-         {/*  <meta name="twitter:site" content="@code_wonders" />
-          <meta
+         <meta name="twitter:site" content="@KomalSingh54" />
+         {/*  <meta
             name="twitter:image"
             content="https://i.ibb.co/jz5Qwx1/Group-7.png"
           /> */}
@@ -56,7 +56,7 @@ export default class MyDocument extends Document {
           />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link rel="preconnect" href="https://i.ibb.co/" crossOrigin="true" />
-          {/* <link rel="shortcut icon" href="/favicon.ico" /> */}
+          <link rel="shortcut icon" href="/favicon.ico" />
           <link
             rel="apple-touch-icon"
             sizes="57x57"

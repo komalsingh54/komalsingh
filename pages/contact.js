@@ -2,7 +2,7 @@
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
 
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 /* -------------------------- Internal Dependencies ------------------------- */
@@ -11,6 +11,71 @@ import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
 
 const Contact = () => {
+/*   const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleInputChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData)
+    // Validate the form data
+    const errors = {};
+    if (!formData.name) {
+      errors.name = 'Name is required';
+    }
+    if (!formData.email) {
+      errors.email = 'Email is required';
+    }
+    if (/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(formData.email) === false) 
+    {
+      errors.email = 'Invalid Email';
+    }
+  
+    if (!formData.password) {
+      errors.password = 'Message is required';
+    }
+
+    if (Object.keys(errors).length === 0) {
+      // Submit the form data
+      console.log(formData);
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      }).then((res) => {
+          console.log('Response received')
+          if (res.status === 200) {
+              console.log('Response succeeded!')
+              setErrors({});
+              setFormData({
+                name: '',
+                email: '',
+                message: ''
+              })
+          }
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    } else {
+      setErrors(errors);
+    }
+  };
+ */
+
   return (
     <Layout title="Contact">
       <PageSection>
@@ -19,14 +84,11 @@ const Contact = () => {
           <article>
             <p>
               Get in touch or shoot me an email directly on{' '}
-              <b>hellocodewonders@gmail.com</b>
+              <b>komalsingh54@gmail.com</b> or <b>+44 7469 516294</b>
             </p>
           </article>
           <br />
-          <form
-            method="POST"
-            action="https://formspree.io/adenekanwonderful41@gmail.com"
-          >
+         {/*  <form onSubmit={handleSubmit}>
             <div className="fields">
               <div className="field half">
                 <input
@@ -36,8 +98,12 @@ const Contact = () => {
                   className="form-control"
                   placeholder="Name"
                   aria-required="true"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   required
                 />
+                {errors.name && <div className="error">{errors.name}</div>}
+
               </div>
               <div className="field half">
                 <input
@@ -48,7 +114,11 @@ const Contact = () => {
                   placeholder="Email"
                   aria-required="true"
                   required
+                  value={formData.email}
+                  onChange={handleInputChange}
                 />
+                {errors.email && <div className="error">{errors.name}</div>}
+
               </div>
               <div className="field">
                 <textarea
@@ -58,18 +128,21 @@ const Contact = () => {
                   className="form-control"
                   placeholder="Message"
                   aria-required="true"
-                  required
+                  value={formData.message}
+                  onChange={handleInputChange} required
                 />
+                {errors.message && <div className="error">{errors.name}</div>}
+
               </div>
             </div>
             <button
               className="btn btn-default"
-              type="submit"
               aria-label="Send Message"
+              type="submit"
             >
               Send Message
             </button>
-          </form>
+          </form> */}
         </PageWrapper>
       </PageSection>
 

@@ -11,14 +11,15 @@ import Link from 'next/link';
 import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
 
-const Resume = () => {
-  const resumeData =
-    'https://www.canva.com/design/DAEEkidwA2Q/view?utm_content=DAEEkidwA2Q&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink';
 
-  const previewData = `${resumeData.substr(
-    0,
-    resumeData.lastIndexOf('/') + 1
-  )}view?embed`;
+const Resume = () => {
+    const resumeData =
+      'https://www.canva.com/design/DAEEkidwA2Q/view?utm_content=DAEEkidwA2Q&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink';
+
+    const previewData = `${resumeData.substr(
+      0,
+      resumeData.lastIndexOf('/') + 1
+    )}view?embed`;
 
   return (
     <Layout title="Resume">
@@ -31,13 +32,13 @@ const Resume = () => {
               <b>
                 <Link legacyBehavior href="/contact">
                   contact page
-                  <a>contact page</a>
                 </Link>
               </b>{' '}
               .{' '}
-              <b>
+
+               <b>
                 <a
-                  href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_LINK}/view?usp=sharing`}
+                  href={`https://drive.google.com/file/d/1G7Houdf_YRasjmdhCBgbfT5qQVpZ15zO/view?usp=share_link`}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Go to Resumé Page"
@@ -48,7 +49,7 @@ const Resume = () => {
               or{' '}
               <b>
                 <a
-                  href={`https://drive.google.com/file/d/${process.env.NEXT_PUBLIC_RESUME_LINK}/view?usp=sharing`}
+                  href={`https://drive.google.com/file/d/1G7Houdf_YRasjmdhCBgbfT5qQVpZ15zO/view?usp=share_link`}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Go to Resumé Page"
@@ -60,20 +61,20 @@ const Resume = () => {
             </p>
           </article>
           <br />
-          <iframe
+          {/* <iframe
             src={previewData}
             allowFullScreen
             width="740"
             height="780"
             title="Komal Singh Resumé"
-          />
+          /> */}
         </PageSection>
         <br />
         <br />
         <FooterLink goto="/contact" className="mt-3 mb-5">
           Are you convinced to contact me now ?
         </FooterLink>
-        <br />
+        {/*   <br /> */}
       </PageWrapper>
     </Layout>
   );

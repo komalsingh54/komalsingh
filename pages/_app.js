@@ -20,18 +20,18 @@ export default class MyApp extends App {
     super();
     this.state = {
       show: false,
-      theme: loadState() ? true : false,
+      theme: loadState() ? false : true,
     };
   }
   loadTheme = () => {
     const { theme } = this.state;
-    if (theme == false) {
+    if (theme === false) {
       clearState();
     } else {
       saveState(1);
     }
   };
-  handleopen = () => {
+  handleOpen = () => {
     const { show } = this.state;
     this.setState({ show: !show });
   };
@@ -68,7 +68,7 @@ export default class MyApp extends App {
               theme: this.state.theme,
               loadTheme: this.loadTheme,
               setTheme: this.setTheme,
-              handleopen: this.handleopen,
+              handleOpen: this.handleOpen,
               closeShow: this.closeShow,
             }}
           >
